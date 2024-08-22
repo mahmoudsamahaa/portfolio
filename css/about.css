@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@600&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+  --main-background-color: #ffe9e9;
+  --main-text-color: #030303;
+  --secondary-text-color: #92929D;
+  --purple-accent: #9F2B68;
+  --section-background-color: #FCFCFC;
+  --main-bg-nav-color: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  background-color: var(--main-background-color);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;
+  background-color: var(--main-bg-nav-color);
+  height: 75px;
+}
+
+nav div a {
+  text-decoration: none;
+  color: var(--main-text-color);
+}
+
+.logo a {
+  font-size: 32px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+}
+
+.nav-link {
+  font-size: 20px;
+}
+
+.skills {
+  background-color: var(--section-background-color);
+  width: 80%;
+  border-radius: 22px;
+  margin-top: 3em;
+  margin-left: 10%;
+  padding: 50px 24px 100px;
+}
+
+.skills-text {
+  text-align: center;
+}
+
+.skills-text h1 {
+  font-size: 36px;
+}
+
+.skills-text p {
+  font-size: 20px;
+  margin-top: 2em;
+}
+
+.skill-points {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.skill {
+  margin-top: 32px;
+  text-align: center;
+}
+
+.skill-header {
+  font-size: 36px;
+}
+
+.skill ul {
+  list-style: none;
+  font-size: 20px;
+  margin-top: 1em;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.skill ul li {
+  margin-top: 16px;
+  color: #fbfbfb;
+  background-color: #030303;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-bg-nav-color);
+  margin-top: 4em;
+  height: 50px;
+}
+
+footer p {
+  font-size: 18px;
+}
+
+footer p a {
+  color: #030303;
+}
+
+@media only screen and (max-width: 1134px) {
+  .nav-links {
+    width: 35%;
+  }
+
+  .card-img {
+    width: 170px;
+  }
+
+  .short {
+    position: absolute;
+    left: 32%;
+    top: 50px;
+  }
+
+  .long {
+    position: absolute;
+    left: 10%;
+    top: 50px;
+  }
+
+  .angular {
+    left: 21%;
+    top: 31%;
+  }
+
+  .node {
+    top: 29%;
+    left: 20%;
+  }
+}

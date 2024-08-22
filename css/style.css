@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@600&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+:root {
+    --main-background-color: #000C66;
+    --main-text-color: #000835;
+    --secondary-text-color: #92929D;
+    --tertiary-text-color: #A020F0;
+    --section-background-color: #FCFCFC;
+  }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+}
+body{
+    background-color: var(--main-background-color);
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 28px;
+    background-color: var(--section-background-color);
+    height: 75px;
+}
+nav div a{
+    text-decoration: none;
+    color: var(--main-text-color);
+}
+.logo a{
+    font-size: 32px;
+}
+.nav-links{
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+}
+.nav-link{
+    font-size: 20px;
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--section-background-color);
+    width: 80%;
+    border-radius: 22px;
+    padding: 44px;
+    height: 80vh;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+}
+.text{
+    color: var(--text-color);
+    font-size: 48px;
+}
+.image img{
+    width: 300px;
+    border-radius: 50%;
+}
+.gray{
+    color: var(--secondary-text-color);
+    font-size: 46px;
+}
+.purple{
+    color: var(--main-text-color);
+    font-weight: 501;
+}
+@media only screen and (max-width: 1134px) {
+    .nav-links{
+        width: 35%;
+    }
+}
