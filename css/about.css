@@ -1,51 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@600&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 :root {
-  --main-background-color: #ffe9e9;
-  --main-text-color: #030303;
-  --secondary-text-color: #92929D;
-  --purple-accent: #9F2B68;
-  --section-background-color: #FCFCFC;
-  --main-bg-nav-color: #fff;
+    --main-background-color: #FEE9FF;
+    --main-text-color: #030303;
+    --secondary-text-color: #92929D;
+    --blue-accent: #000070;
+    --section-background-color: #FCFCFC;
+    --main-bg-nav-color: #000070;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Rubik", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+    transition: 0.01s;
 }
 
-body {
-  background-color: var(--main-background-color);
-}
-
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 28px;
-  background-color: var(--main-bg-nav-color);
-  height: 75px;
-}
-
-nav div a {
-  text-decoration: none;
-  color: var(--main-text-color);
-}
-
-.logo a {
-  font-size: 32px;
-}
-
-.nav-links {
-  display: flex;
-  justify-content: space-between;
-  width: 30%;
+.navbar-brand{
+  color: white !important;
+  margin-left: .5em !important;
 }
 
 .nav-link {
-  font-size: 20px;
+  margin-left: -12.5%;
+  padding-left: 10%;
+  width: 104.5%;
+  color: white !important;
+}
+
+.navbar-nav{
+  margin-left: 1em;
+}
+
+nav {
+  background-color: var(--main-bg-nav-color);
+  height: 75px;
+  width: 100%;
+}
+
+.navbar-toggler{
+  background-color: white !important;
 }
 
 .skills {
@@ -54,15 +49,14 @@ nav div a {
   border-radius: 22px;
   margin-top: 3em;
   margin-left: 10%;
-  padding: 50px 24px 100px;
-}
-
-.skills-text {
+  padding: 50px 5px 100px;
   text-align: center;
 }
 
-.skills-text h1 {
+ h1 {
   font-size: 36px;
+  margin-bottom: 2%;
+  font-weight: 600;
 }
 
 .skills-text p {
@@ -70,37 +64,24 @@ nav div a {
   margin-top: 2em;
 }
 
-.skill-points {
+.skills-container{
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.skill {
-  margin-top: 32px;
-  text-align: center;
-}
-
-.skill-header {
-  font-size: 36px;
-}
-
-.skill ul {
-  list-style: none;
-  font-size: 20px;
-  margin-top: 1em;
-  display: flex;
-  justify-content: space-around;
-  margin-top: 16px;
+  justify-content: space-evenly;
+  text-align: start;
   flex-wrap: wrap;
 }
 
-.skill ul li {
-  margin-top: 16px;
-  color: #fbfbfb;
-  background-color: #030303;
-  border-radius: 5px;
+.skill{
+  color: white;
+  background-color: #000080;
   padding: 8px;
+  font-size: 20px;
+  border-radius: 5px;
+  margin-bottom: 1%;
+  width: 28vw;
+  min-width: 258px;
+  text-align: center;
+  animation: tracking-in-expand-fwd-top 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
 footer {
@@ -112,42 +93,113 @@ footer {
   height: 50px;
 }
 
-footer p {
-  font-size: 18px;
+footer p, footer p a{
+  font-size: 16px;
+  color: white;
 }
 
-footer p a {
-  color: #030303;
+.note{
+  display: none;
 }
 
-@media only screen and (max-width: 1134px) {
-  .nav-links {
+.note h1{
+  font-weight: 600;
+  font-size: larger;
+  text-align: center;
+}
+
+@media only screen and (min-width: 1354px) {
+  .navbar-brand {
+    font-size: 32px;
+  }
+
+  .navbar-nav {
     width: 35%;
   }
 
-  .card-img {
-    width: 170px;
+  .nav-link {
+    font-size: large;
+  }
+  .nav-link:nth-child(1){
+    margin-left: -1em;
   }
 
-  .short {
-    position: absolute;
-    left: 32%;
-    top: 50px;
+  .nav-link:nth-child(2){
+    margin-right: 2em;
   }
 
-  .long {
-    position: absolute;
-    left: 10%;
-    top: 50px;
+}
+
+@media only screen and (min-width: 1354px) {
+  .navbar-brand {
+    font-size: 32px;
   }
 
-  .angular {
-    left: 21%;
-    top: 31%;
+  .navbar-nav {
+    width: 42.5%;
+    margin-left: 3%;
   }
 
-  .node {
-    top: 29%;
-    left: 20%;
+  .nav-link {
+    font-size: large;
+  }
+  .nav-link:nth-child(1){
+    margin-right: -0.5em;
+  }
+}
+
+@media only screen and (max-width: 1353px) {
+  .navbar-nav {
+    width: 52.5%;
+  }
+  .nav-link{
+    background-color: #000070 !important;
+    margin-left: -12.5%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .navbar-nav {
+    width: 57.5%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .nav-link {
+    background-color: #fff;
+    width: 226%;
+  }
+}
+
+@media only screen and (max-width: 690px){
+  .progresss-container{
+    display: block;
+  }
+  .content{
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media only screen and (pointer:coarse){
+  .note{
+    display: block;
+  }
+}
+
+
+
+@keyframes tracking-in-expand-fwd-top {
+  0% {
+    letter-spacing: -0.5em;
+    transform: translateZ(-700px) translateY(-500px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateZ(0) translateY(0);
+    opacity: 1;
   }
 }
